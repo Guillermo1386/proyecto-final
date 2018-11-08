@@ -27,11 +27,11 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Administrador"/>
+        <Property name="text" type="java.lang.String" value="INGRESO VIDEO JUEGOS"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="143" y="11" width="90" height="-1"/>
+          <AbsoluteConstraints x="143" y="11" width="160" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

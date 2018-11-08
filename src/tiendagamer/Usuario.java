@@ -27,147 +27,124 @@ public class Usuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        txtcodVideo = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        txtestado = new javax.swing.JTextField();
-        txtnomVideo = new javax.swing.JTextField();
-        txtvalorVideo = new javax.swing.JTextField();
-        txtgeneroVideo = new javax.swing.JTextField();
-        txtcantVideo = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        lblcedula = new javax.swing.JLabel();
+        lblnombre = new javax.swing.JLabel();
+        lbltelefono = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        txtcedula = new javax.swing.JTextField();
+        txtnombre = new javax.swing.JTextField();
+        txtapeliido = new javax.swing.JTextField();
+        txttelefono = new javax.swing.JTextField();
+        cmbgenero = new javax.swing.JComboBox();
+        btnguardar = new javax.swing.JButton();
+        btneliminar = new javax.swing.JButton();
+        btnactualizar = new javax.swing.JButton();
+        btnbuscar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        jLabel2.setText("Nombre videos juego");
+        lblcedula.setText("Cedula");
+        getContentPane().add(lblcedula);
+        lblcedula.setBounds(37, 55, 33, 14);
 
-        txtcodVideo.addActionListener(new java.awt.event.ActionListener() {
+        lblnombre.setText("Nombre");
+        getContentPane().add(lblnombre);
+        lblnombre.setBounds(33, 96, 37, 14);
+
+        lbltelefono.setText("Telefono");
+        getContentPane().add(lbltelefono);
+        lbltelefono.setBounds(33, 182, 42, 14);
+
+        jLabel9.setText("Apellido");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(33, 141, 37, 14);
+
+        jLabel10.setText("Genero");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(33, 222, 35, 14);
+        getContentPane().add(txtcedula);
+        txtcedula.setBounds(110, 52, 69, 20);
+        getContentPane().add(txtnombre);
+        txtnombre.setBounds(110, 93, 69, 20);
+        getContentPane().add(txtapeliido);
+        txtapeliido.setBounds(110, 138, 69, 20);
+        getContentPane().add(txttelefono);
+        txttelefono.setBounds(110, 179, 69, 20);
+
+        cmbgenero.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccionar:", "Masculino", "Femenino", "Otro" }));
+        cmbgenero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodVideoActionPerformed(evt);
+                cmbgeneroActionPerformed(evt);
             }
         });
+        getContentPane().add(cmbgenero);
+        cmbgenero.setBounds(110, 219, 83, 20);
 
-        jLabel3.setText("Codigo video juego");
-
-        jLabel4.setText("Genero video juego");
-
-        jLabel5.setText("Cantidad video juego");
-
-        jLabel6.setText("Valor video juego");
-
-        jLabel8.setText("Estado");
-
-        txtnomVideo.addActionListener(new java.awt.event.ActionListener() {
+        btnguardar.setText("Guardar");
+        btnguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnomVideoActionPerformed(evt);
+                btnguardarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnguardar);
+        btnguardar.setBounds(200, 50, 71, 23);
 
-        jButton1.setText("Guardar");
+        btneliminar.setText("Eliminar");
+        getContentPane().add(btneliminar);
+        btneliminar.setBounds(200, 90, 69, 23);
 
-        jButton2.setText("Eliminar");
+        btnactualizar.setText("Actulizar");
+        getContentPane().add(btnactualizar);
+        btnactualizar.setBounds(200, 130, 73, 23);
 
-        jButton3.setText("Buscar");
+        btnbuscar.setText("Buscar");
+        btnbuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbuscarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnbuscar);
+        btnbuscar.setBounds(200, 180, 65, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(txtcodVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(51, 51, 51)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(txtnomVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(50, 50, 50)
-                            .addComponent(jButton2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(txtgeneroVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(50, 50, 50)
-                            .addComponent(jButton3))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(txtvalorVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(txtcantVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(76, 76, 76)
-                            .addComponent(txtestado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 370, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 75, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel3))
-                        .addComponent(txtcodVideo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1))
-                    .addGap(26, 26, 26)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2)
-                        .addComponent(txtnomVideo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2))
-                    .addGap(17, 17, 17)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel4)
-                        .addComponent(txtgeneroVideo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jButton3)))
-                    .addGap(7, 7, 7)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel6))
-                        .addComponent(txtvalorVideo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(16, 16, 16)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel5)
-                        .addComponent(txtcantVideo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(10, 10, 10)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel8)
-                        .addComponent(txtestado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 75, Short.MAX_VALUE)))
-        );
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(25, 268, 452, 84);
+
+        jLabel1.setText("INGRESE");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(120, 10, 70, 14);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtcodVideoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodVideoActionPerformed
+    private void cmbgeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbgeneroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodVideoActionPerformed
+    }//GEN-LAST:event_cmbgeneroActionPerformed
 
-    private void txtnomVideoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnomVideoActionPerformed
+    private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtnomVideoActionPerformed
+    }//GEN-LAST:event_btnguardarActionPerformed
+
+    private void btnbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnbuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,20 +182,22 @@ public class Usuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField txtcantVideo;
-    private javax.swing.JTextField txtcodVideo;
-    private javax.swing.JTextField txtestado;
-    private javax.swing.JTextField txtgeneroVideo;
-    private javax.swing.JTextField txtnomVideo;
-    private javax.swing.JTextField txtvalorVideo;
+    private javax.swing.JButton btnactualizar;
+    private javax.swing.JButton btnbuscar;
+    private javax.swing.JButton btneliminar;
+    private javax.swing.JButton btnguardar;
+    private javax.swing.JComboBox cmbgenero;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblcedula;
+    private javax.swing.JLabel lblnombre;
+    private javax.swing.JLabel lbltelefono;
+    private javax.swing.JTextField txtapeliido;
+    private javax.swing.JTextField txtcedula;
+    private javax.swing.JTextField txtnombre;
+    private javax.swing.JTextField txttelefono;
     // End of variables declaration//GEN-END:variables
 }

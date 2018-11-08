@@ -50,9 +50,9 @@ public class Administrador extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setText("Administrador");
+        jLabel1.setText("INGRESO VIDEO JUEGOS");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(143, 11, 90, 14);
+        jLabel1.setBounds(143, 11, 160, 14);
 
         jLabel2.setText("Nombre videos juego");
         getContentPane().add(jLabel2);
