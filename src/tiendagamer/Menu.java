@@ -1,6 +1,7 @@
 
 package tiendagamer;
 
+//Guillermo
 
 public class Menu extends javax.swing.JFrame {
 
