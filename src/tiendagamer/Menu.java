@@ -1,15 +1,14 @@
 
 package tiendagamer;
 
-//Guillermo
 
 public class Menu extends javax.swing.JFrame {
 
    
     public Menu() {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.setSize(550, 400);
+         this.setLocationRelativeTo(null);
+         this.setSize(650, 550);
     }
 
    
@@ -23,11 +22,10 @@ public class Menu extends javax.swing.JFrame {
         btnventajuego = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("MENU PRINCIPAL");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(230, 20, 150, 14);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 150, -1));
 
         btnbuscarjuego.setText("INGRESO VIDEO JUEGO");
         btnbuscarjuego.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -35,8 +33,7 @@ public class Menu extends javax.swing.JFrame {
                 btnbuscarjuegoMouseClicked(evt);
             }
         });
-        getContentPane().add(btnbuscarjuego);
-        btnbuscarjuego.setBounds(200, 60, 160, 23);
+        getContentPane().add(btnbuscarjuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 160, 20));
 
         btningCliente.setText("INGRESAR CLIENTE");
         btningCliente.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -49,8 +46,7 @@ public class Menu extends javax.swing.JFrame {
                 btningClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(btningCliente);
-        btningCliente.setBounds(200, 150, 140, 23);
+        getContentPane().add(btningCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 140, 20));
 
         btnventajuego.setText("VENTA DE JUEGOS");
         btnventajuego.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -58,8 +54,7 @@ public class Menu extends javax.swing.JFrame {
                 btnventajuegoMouseClicked(evt);
             }
         });
-        getContentPane().add(btnventajuego);
-        btnventajuego.setBounds(200, 110, 130, 23);
+        getContentPane().add(btnventajuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 130, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

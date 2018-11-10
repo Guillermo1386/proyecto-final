@@ -1,0 +1,10 @@
+module Administradores{
+    interface Administrador{
+        boolean insertarAdministrador(in long codigo, in wstring nombre, in wstring genero, in wstring valor , in wstring cantidad,in wstring estado);
+        boolean actualizarAdministrador(in long codigo, in wstring nombre, in wstring genero, in wstring valor , in wstring cantidad,in wstring estado);
+        boolean eliminarAdministrador(in long codigo);
+        wstring consultarAdministrador(in long codigo);
+
+        oneway void shoutdown();
+    };
+};

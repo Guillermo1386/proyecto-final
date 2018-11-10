@@ -9,8 +9,8 @@ public class Login extends javax.swing.JFrame {
    
     public Login() {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.setSize(550, 400);
+         this.setLocationRelativeTo(null);
+         this.setSize(650, 550);
     }
 
    
@@ -26,27 +26,23 @@ public class Login extends javax.swing.JFrame {
         Password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblusuario.setText("Usuario");
-        getContentPane().add(lblusuario);
-        lblusuario.setBounds(30, 60, 36, 14);
+        getContentPane().add(lblusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 70, -1));
 
         lblcontraseña.setText("Contraseña");
-        getContentPane().add(lblcontraseña);
-        lblcontraseña.setBounds(30, 100, 60, 14);
+        getContentPane().add(lblcontraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 80, -1));
 
         jLabel3.setText("INGRESO");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(160, 10, 80, 14);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 80, -1));
 
         txtusuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtusuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(txtusuario);
-        txtusuario.setBounds(150, 60, 70, 20);
+        getContentPane().add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 70, -1));
 
         jButton1.setText("Ingresar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -59,10 +55,8 @@ public class Login extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(80, 150, 73, 23);
-        getContentPane().add(Password);
-        Password.setBounds(150, 100, 70, 20);
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
+        getContentPane().add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 70, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

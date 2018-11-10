@@ -7,8 +7,8 @@ public class Usuario extends javax.swing.JFrame {
     
     public Usuario() {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.setSize(550, 400);
+         this.setLocationRelativeTo(null);
+         this.setSize(650, 550);
     }
 
    

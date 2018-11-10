@@ -1,0 +1,11 @@
+ module Usuarios{
+    interface Usuario{
+        boolean insertarUsuario(in long cedula, in wstring nombre, in wstring apellido, in wstring telefono , in wstring genero);
+        boolean actualizarUsuario(in long cedula, in wstring nombre, in wstring apellido, in wstring telefono , in wstring genero);
+        boolean eliminarUsuario(in long cedula);
+        wstring consultarUsuario(in long cedula);
+
+        oneway void shoutdown();
+    
+    };
+};
