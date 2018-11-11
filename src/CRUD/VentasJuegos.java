@@ -1,7 +1,7 @@
 
 package CRUD;
 import CRUD.VentasJuegos.*;
-import DefinicionInterfaz.Juegos.VentajuegoPOA;
+import DefinicionInterfaz.VentaJuegos.VentajuegoPOA;
 import tiendagamer.*;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -120,6 +120,10 @@ Conexion objConec = new Conexion();
             JOptionPane.showMessageDialog(null, "Error " + e.getMessage());
         }
        return resultado;
+    }
+
+    public boolean eliminarVentajuego(String nombre) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 

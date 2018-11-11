@@ -1,4 +1,4 @@
-package DefinicionInterfaz.Juegos;
+package DefinicionInterfaz.VentaJuegos;
 
 
 /**
@@ -8,7 +8,7 @@ package DefinicionInterfaz.Juegos;
 * domingo 11 de noviembre de 2018 02:20:52 AM COT
 */
 
-public class _VentajuegoStub extends org.omg.CORBA.portable.ObjectImpl implements DefinicionInterfaz.Juegos.Ventajuego
+public class _VentajuegoStub extends org.omg.CORBA.portable.ObjectImpl implements DefinicionInterfaz.VentaJuegos.Ventajuego
 {
 
   public boolean insertarVentajuego (int nombre, String nombreJuego, String generoJuego, String precio, String cantidad, String total)

@@ -1,4 +1,4 @@
-package DefinicionInterfaz.Juegos;
+package DefinicionInterfaz.VentaJuegos;
 
 
 /**
@@ -12,7 +12,7 @@ abstract public class VentajuegoHelper
 {
   private static String  _id = "IDL:VentasJuegos/Ventajuego:1.0";
 
-  public static void insert (org.omg.CORBA.Any a, DefinicionInterfaz.Juegos.Ventajuego that)
+  public static void insert (org.omg.CORBA.Any a, DefinicionInterfaz.VentaJuegos.Ventajuego that)
   {
     org.omg.CORBA.portable.OutputStream out = a.create_output_stream ();
     a.type (type ());
@@ -20,7 +20,7 @@ abstract public class VentajuegoHelper
     a.read_value (out.create_input_stream (), type ());
   }
 
-  public static DefinicionInterfaz.Juegos.Ventajuego extract (org.omg.CORBA.Any a)
+  public static DefinicionInterfaz.VentaJuegos.Ventajuego extract (org.omg.CORBA.Any a)
   {
     return read (a.create_input_stream ());
   }
@@ -30,7 +30,7 @@ abstract public class VentajuegoHelper
   {
     if (__typeCode == null)
     {
-      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (DefinicionInterfaz.Juegos.VentajuegoHelper.id (), "Ventajuego");
+      __typeCode = org.omg.CORBA.ORB.init ().create_interface_tc (DefinicionInterfaz.VentaJuegos.VentajuegoHelper.id (), "Ventajuego");
     }
     return __typeCode;
   }
@@ -40,43 +40,43 @@ abstract public class VentajuegoHelper
     return _id;
   }
 
-  public static DefinicionInterfaz.Juegos.Ventajuego read (org.omg.CORBA.portable.InputStream istream)
+  public static DefinicionInterfaz.VentaJuegos.Ventajuego read (org.omg.CORBA.portable.InputStream istream)
   {
     return narrow (istream.read_Object (_VentajuegoStub.class));
   }
 
-  public static void write (org.omg.CORBA.portable.OutputStream ostream, DefinicionInterfaz.Juegos.Ventajuego value)
+  public static void write (org.omg.CORBA.portable.OutputStream ostream, DefinicionInterfaz.VentaJuegos.Ventajuego value)
   {
     ostream.write_Object ((org.omg.CORBA.Object) value);
   }
 
-  public static DefinicionInterfaz.Juegos.Ventajuego narrow (org.omg.CORBA.Object obj)
+  public static DefinicionInterfaz.VentaJuegos.Ventajuego narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof DefinicionInterfaz.Juegos.Ventajuego)
-      return (DefinicionInterfaz.Juegos.Ventajuego)obj;
+    else if (obj instanceof DefinicionInterfaz.VentaJuegos.Ventajuego)
+      return (DefinicionInterfaz.VentaJuegos.Ventajuego)obj;
     else if (!obj._is_a (id ()))
       throw new org.omg.CORBA.BAD_PARAM ();
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      DefinicionInterfaz.Juegos._VentajuegoStub stub = new DefinicionInterfaz.Juegos._VentajuegoStub ();
+            DefinicionInterfaz.VentaJuegos._VentajuegoStub stub = new DefinicionInterfaz.VentaJuegos._VentajuegoStub ();
       stub._set_delegate(delegate);
       return stub;
     }
   }
 
-  public static DefinicionInterfaz.Juegos.Ventajuego unchecked_narrow (org.omg.CORBA.Object obj)
+  public static DefinicionInterfaz.VentaJuegos.Ventajuego unchecked_narrow (org.omg.CORBA.Object obj)
   {
     if (obj == null)
       return null;
-    else if (obj instanceof DefinicionInterfaz.Juegos.Ventajuego)
-      return (DefinicionInterfaz.Juegos.Ventajuego)obj;
+    else if (obj instanceof DefinicionInterfaz.VentaJuegos.Ventajuego)
+      return (DefinicionInterfaz.VentaJuegos.Ventajuego)obj;
     else
     {
       org.omg.CORBA.portable.Delegate delegate = ((org.omg.CORBA.portable.ObjectImpl)obj)._get_delegate ();
-      DefinicionInterfaz.Juegos._VentajuegoStub stub = new DefinicionInterfaz.Juegos._VentajuegoStub ();
+            DefinicionInterfaz.VentaJuegos._VentajuegoStub stub = new DefinicionInterfaz.VentaJuegos._VentajuegoStub ();
       stub._set_delegate(delegate);
       return stub;
     }

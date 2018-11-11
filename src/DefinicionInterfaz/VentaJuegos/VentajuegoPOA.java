@@ -1,4 +1,4 @@
-package DefinicionInterfaz.Juegos;
+package DefinicionInterfaz.VentaJuegos;
 
 
 /**
@@ -9,7 +9,7 @@ package DefinicionInterfaz.Juegos;
 */
 
 public abstract class VentajuegoPOA extends org.omg.PortableServer.Servant
- implements DefinicionInterfaz.Juegos.VentajuegoOperations, org.omg.CORBA.portable.InvokeHandler
+ implements DefinicionInterfaz.VentaJuegos.VentajuegoOperations, org.omg.CORBA.portable.InvokeHandler
 {
 
   // Constructors

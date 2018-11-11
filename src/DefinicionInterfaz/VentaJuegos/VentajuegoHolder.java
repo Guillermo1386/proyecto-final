@@ -1,4 +1,4 @@
-package DefinicionInterfaz.Juegos;
+package DefinicionInterfaz.VentaJuegos;
 
 /**
 * VentasJuegos/VentajuegoHolder.java .
@@ -9,30 +9,30 @@ package DefinicionInterfaz.Juegos;
 
 public final class VentajuegoHolder implements org.omg.CORBA.portable.Streamable
 {
-  public DefinicionInterfaz.Juegos.Ventajuego value = null;
+  public DefinicionInterfaz.VentaJuegos.Ventajuego value = null;
 
   public VentajuegoHolder ()
   {
   }
 
-  public VentajuegoHolder (DefinicionInterfaz.Juegos.Ventajuego initialValue)
+  public VentajuegoHolder (DefinicionInterfaz.VentaJuegos.Ventajuego initialValue)
   {
     value = initialValue;
   }
 
   public void _read (org.omg.CORBA.portable.InputStream i)
   {
-    value = DefinicionInterfaz.Juegos.VentajuegoHelper.read (i);
+    value = DefinicionInterfaz.VentaJuegos.VentajuegoHelper.read (i);
   }
 
   public void _write (org.omg.CORBA.portable.OutputStream o)
   {
-    DefinicionInterfaz.Juegos.VentajuegoHelper.write (o, value);
+        DefinicionInterfaz.VentaJuegos.VentajuegoHelper.write (o, value);
   }
 
   public org.omg.CORBA.TypeCode _type ()
   {
-    return DefinicionInterfaz.Juegos.VentajuegoHelper.type ();
+    return DefinicionInterfaz.VentaJuegos.VentajuegoHelper.type ();
   }
 
 }
