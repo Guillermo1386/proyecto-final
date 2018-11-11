@@ -17,6 +17,7 @@ public class Login extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         lblusuario = new javax.swing.JLabel();
         lblcontraseña = new javax.swing.JLabel();
@@ -26,6 +27,10 @@ public class Login extends javax.swing.JFrame {
         Password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, lblusuario, org.jdesktop.beansbinding.ELProperty.create("${font}"), this, org.jdesktop.beansbinding.BeanProperty.create("iconImage"));
+        bindingGroup.addBinding(binding);
+
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblusuario.setText("Usuario");
@@ -57,6 +62,8 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
         getContentPane().add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 70, -1));
+
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,5 +119,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel lblcontraseña;
     private javax.swing.JLabel lblusuario;
     private javax.swing.JTextField txtusuario;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

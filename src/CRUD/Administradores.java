@@ -32,7 +32,6 @@ public class Administradores extends AdministradorPOA {
         return resultado; 
     }
     
-    @Override
     
     public boolean actualizarAdministrador(int codigo, String nombre, String genero, String valor, String cantidad, String estado) {
            boolean resultado = false;
@@ -60,7 +59,7 @@ public class Administradores extends AdministradorPOA {
     public boolean eliminarAdministrador(int codigo) {
         boolean resultado = false;
         try {
-            String sql = "DELETE FROM administrador WHERE cc = " + codigo;
+            String sql = "DELETE FROM administrador WHERE codigo = " + codigo;
             //Se realiza la conexión con la base de datos
             objConec.conexion();
             Statement st = objConec.conexion().createStatement();
@@ -78,12 +77,12 @@ public class Administradores extends AdministradorPOA {
     }
      
        @Override
-    public String consultarAdministrador(int cedula) {
+    public String consultarAdministrador(int codigo) {
         String resultado = "";
         
         try {
             
-            String sqlConsultar = "Select * from administrador where cedula = " + cedula;
+            String sqlConsultar = "Select * from administrador where cedula = " + codigo;
             //Se realiza la conexión con la base de datos
             objConec.conexion();
             Statement st = objConec.conexion().createStatement();

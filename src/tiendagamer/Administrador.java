@@ -304,7 +304,7 @@ public class Administrador extends javax.swing.JFrame {
 
     private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
        
-        if (tbladministrador.getRowCount() ==0){
+        if (tbladministrador.getRowCount() == 0){
           JOptionPane.showMessageDialog(null, "por favor presione el booton de buscar");
           return;
         }
@@ -318,8 +318,11 @@ public class Administrador extends javax.swing.JFrame {
         
         try {
             int codigo = Integer.parseInt(txtcodVideo.getText());
+            
             boolean result = objAdministrador.eliminarAdministrador(codigo);
+            
             if (result == true){
+                JOptionPane.showConfirmDialog(null, "El registro se elimino correctamennte");
                 txtcodVideo.setText("");
                 txtnomVideo.setText("");
                 txtgeneroVideo.setText("");
@@ -586,62 +589,3 @@ public class Administrador extends javax.swing.JFrame {
     private javax.swing.JTextField txtvalorVideo2;
     // End of variables declaration//GEN-END:variables
 }
- /* if (txtcodVideo.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"por favor, Ingrese cogido");
-            txtcodVideo.requestFocus();
-            return;
-        }
-        if (txtnomVideo.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "por favor,Ingrese un nombre de juego");
-            txtnomVideo.requestFocus();
-            return;
-        }
-        if (txtgeneroVideo.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "por favor,Ingrese genero juego");
-            txtgeneroVideo.requestFocus();
-            return;
-        }
-         if (txtvalorVideo2.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "por favor,Ingrese valor de juego");
-            txtestado.requestFocus();
-            return; 
-         }
-         if (txtcanvideo.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "por favor,Ingrese cantidad");
-            txtcanvideo.requestFocus();
-            return;   
-         }
-         if (txtestado.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "por favor,Ingrese estado de juego");
-            txtestado.requestFocus();
-            return;  
-         }
-         
-       
-          Administradores objAdministrador = new Administradores();
-             
-             int codigo = Integer.parseInt(txtcodVideo.getText());
-             String nombre = txtnomVideo.getText();
-             String genero = txtgeneroVideo.getText();
-             String valor = txtvalorVideo2.getText();
-             String cantidad = txtcanvideo.getText();
-             String estado = txtestado.getText();
-        
-        try {
-             boolean  resultado = objAdministrador.insertarAdministrador(codigo, nombre, genero, valor, cantidad, estado);      
-             if (resultado == true){
-                 JOptionPane.showMessageDialog(null, "Los datos se han registrado satisfactoriamente");
-                txtcodVideo.setText("");
-                txtnomVideo.setText("");
-                txtgeneroVideo.setText("");
-                txtvalorVideo2.setText("");
-                txtcanvideo.setText("");
-                txtestado.setText("");
-             }
-             else{
-             }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "lo sentimos, ocurrio algo inesperado, por favor vuelva a intentarlo");
-  
-        }
-            */
