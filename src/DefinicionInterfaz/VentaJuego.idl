@@ -1,0 +1,10 @@
+module VentaJuegos{
+    interface Ventajuego{
+        boolean insertarVentajuego(in long nombre, in wstring nombreJuego, in wstring generoJuego, in wstring precio , in wstring cantidad, in wstring total);
+        boolean actualizarVentajuego(in long nombre, in wstring nombreJuego, in wstring generoJuego, in wstring precio , in wstring cantidad, in wstring total);
+        boolean eliminarVentajuego(in long nombre);
+        wstring consultarVentajuego(in long nombre);
+
+        oneway void shoutdown();
+    };
+};

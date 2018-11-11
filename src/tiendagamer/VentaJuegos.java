@@ -18,7 +18,6 @@ public class VentaJuegos extends javax.swing.JFrame {
 
         lblprecio = new javax.swing.JLabel();
         lblcantidad = new javax.swing.JLabel();
-        lblmodo = new javax.swing.JLabel();
         lblnomJuego = new javax.swing.JLabel();
         lblnombre = new javax.swing.JLabel();
         lblGenJuego = new javax.swing.JLabel();
@@ -28,12 +27,12 @@ public class VentaJuegos extends javax.swing.JFrame {
         txtgenerojuego = new javax.swing.JTextField();
         txtnomjuego = new javax.swing.JTextField();
         txtprecio = new javax.swing.JTextField();
-        cmbmodoPago = new javax.swing.JComboBox();
         btnbuscar = new javax.swing.JButton();
         btnactualizar = new javax.swing.JButton();
         btneliminar = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         btnguardar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 255, 255));
@@ -46,10 +45,6 @@ public class VentaJuegos extends javax.swing.JFrame {
         lblcantidad.setText("Cantidad");
         getContentPane().add(lblcantidad);
         lblcantidad.setBounds(23, 199, 43, 14);
-
-        lblmodo.setText("Modo de pago");
-        getContentPane().add(lblmodo);
-        lblmodo.setBounds(23, 231, 68, 14);
 
         lblnomJuego.setText("Nombre juego");
         getContentPane().add(lblnomJuego);
@@ -79,10 +74,6 @@ public class VentaJuegos extends javax.swing.JFrame {
         getContentPane().add(txtprecio);
         txtprecio.setBounds(120, 160, 70, 20);
 
-        cmbmodoPago.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccionar:", "Tarjeta", "Efecty", "Batolo", "Suchance", "otro" }));
-        getContentPane().add(cmbmodoPago);
-        cmbmodoPago.setBounds(120, 230, 83, 20);
-
         btnbuscar.setText("Buscar");
         getContentPane().add(btnbuscar);
         btnbuscar.setBounds(210, 160, 120, 23);
@@ -107,6 +98,10 @@ public class VentaJuegos extends javax.swing.JFrame {
         btnguardar.setText("Guardar");
         getContentPane().add(btnguardar);
         btnguardar.setBounds(210, 70, 120, 23);
+
+        jLabel1.setText("Total");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(30, 230, 50, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -157,12 +152,11 @@ public class VentaJuegos extends javax.swing.JFrame {
     private javax.swing.JButton btnbuscar;
     private javax.swing.JButton btneliminar;
     private javax.swing.JButton btnguardar;
-    private javax.swing.JComboBox cmbmodoPago;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel lblGenJuego;
     private javax.swing.JLabel lblcantidad;
-    private javax.swing.JLabel lblmodo;
     private javax.swing.JLabel lblnomJuego;
     private javax.swing.JLabel lblnombre;
     private javax.swing.JLabel lblprecio;
