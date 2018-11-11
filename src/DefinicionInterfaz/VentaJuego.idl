@@ -1,4 +1,4 @@
-module VentaJuegos{
+module VentasJuegos{
     interface Ventajuego{
         boolean insertarVentajuego(in long nombre, in wstring nombreJuego, in wstring generoJuego, in wstring precio , in wstring cantidad, in wstring total);
         boolean actualizarVentajuego(in long nombre, in wstring nombreJuego, in wstring generoJuego, in wstring precio , in wstring cantidad, in wstring total);
