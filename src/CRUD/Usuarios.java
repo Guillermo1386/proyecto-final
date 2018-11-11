@@ -1,5 +1,6 @@
 
 package CRUD;
+
 import CRUD.Usuarios.*;
 import DefinicionInterfaz.Usuarios.UsuarioPOA;
 import tiendagamer.*;
@@ -7,52 +8,15 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-public class Usuarios extends UsuarioPOA {
-   Conexion objConec = new Conexion();
-    @Override
-    public boolean insertarUsuario(int cedula, String nombre, String apellido, String telefono, String genero) {
-        boolean resultado = false;
-        try {
-            String sql = "insert into usuario (cedula,nombre,apellido,telefonor,estado) values ('"+cedula+"','"+nombre+"','"+apellido+"','"+genero+"')";
-            objConec.conexion();
-            Statement st = objConec.conexion().createStatement();
-            int val = st.executeUpdate(sql);
-            if(val>0){
-                resultado = true;
-            }
-            //Se cierran las conexiones
-            objConec.conexion().close();
-            st.close();
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Lo sentimos, la cedula o el nombre ya se encuentran registrados. ¡Por favor, vuelva a intentarlo!" + e.getMessage()); 
-        }        
-        return resultado; 
-    }
+
+public class Usuarios  extends UsuarioPOA{
+    
+Conexion objConec = new Conexion();
+
+
 
     @Override
-    public boolean actualizarUsuario(int cedula, String nombre, String apellido, String telefono, String genero) {
-        boolean resultado = false;
-        try {
-            String sql = "UPDATE usuario SET nombre = '"+nombre+"', apellido = '"+apellido+"', telefono = '"+telefono+"' , genero = '"+genero+"' where codigo = '"+cedula+"' ";
-            
-            objConec.conexion();
-            Statement st = objConec.conexion().createStatement();
-            int val = st.executeUpdate(sql);
-            if(val>0){
-                resultado = true;
-            }
-            //Se cierran las conexiones.
-            objConec.conexion().close();
-            st.close();
-        } catch (Exception e) {
-           JOptionPane.showMessageDialog(null, "Error al actualizar. "+e);
-        }  
-        return resultado;
-    }
-
-    @Override
-    public boolean eliminarUsuario(int cedula) {
+    public boolean eliminarUsuario(int cedula){
         
         boolean resultado = false;
         try {
@@ -106,7 +70,7 @@ public class Usuarios extends UsuarioPOA {
        ResultSet resultado = null;
        
         try {
-            String sqlConsultar = "Select cedula, nombre, apellido, telefono,estado from usuario";
+            String sqlConsultar = "Select cedula, nombre, apellido, telefono, genero from usuario";
             //Se realiza la conexión con la base de datos
             objConec.conexion();
             Statement st = objConec.conexion().createStatement();
@@ -121,5 +85,48 @@ public class Usuarios extends UsuarioPOA {
         }
        return resultado;
      }
+
+    @Override
+    public boolean insertarUsuario(int cedula, String nombre, String apellido, String telefono, String genero) {
+        
+       boolean resultado = false;
+        try {
+            String sql = "insert into usuario (cedula,nombre,apellido,telefono,genero) values ('"+cedula+"','"+nombre+"','"+apellido+"','"+telefono+"','"+genero+"')";
+            objConec.conexion();
+            Statement st = objConec.conexion().createStatement();
+            int val = st.executeUpdate(sql);
+            if(val>0){
+                resultado = true;
+            }
+            //Se cierran las conexiones
+            objConec.conexion().close();
+            st.close();
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Lo sentimos, la cedula o el nombre ya se encuentran registrados. ¡Por favor, vuelva a intentarlo!" + e.getMessage()); 
+        }        
+        return resultado; 
+    }
+
+    @Override
+    public boolean actualizarUsuario(int cedula, String nombre, String apellido, String telefono, String genero) {
+         boolean resultado = false;
+        try {
+            String sql = "UPDATE usuario SET nombre = '"+nombre+"', apellido = '"+apellido+", 'genero = '"+genero+"', telefono = '"+telefono+" where codigo = '"+cedula+"'";
+            
+            objConec.conexion();
+            Statement st = objConec.conexion().createStatement();
+            int val = st.executeUpdate(sql);
+            if(val>0){
+                resultado = true;
+            }
+            //Se cierran las conexiones.
+            objConec.conexion().close();
+            st.close();
+        } catch (Exception e) {
+           JOptionPane.showMessageDialog(null, "Error al actualizar. "+e);
+        }  
+        return resultado;
+    }
     
 }

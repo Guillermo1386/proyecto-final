@@ -247,6 +247,11 @@ public class Administrador extends javax.swing.JFrame {
         btnlimpiar.setBounds(400, 100, 100, 23);
 
         btnguardar.setText("Guardar");
+        btnguardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnguardarMouseClicked(evt);
+            }
+        });
         btnguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnguardarActionPerformed(evt);
@@ -492,7 +497,7 @@ public class Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_txtestadoKeyTyped
 
     private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
-          // Conexion objConec = new Conexion();
+         
  Conexion objConec = new Conexion();           
         if (txtcodVideo.getText().equals("")){
             JOptionPane.showMessageDialog(null,"por favor, Ingrese cogido");
@@ -553,6 +558,10 @@ public class Administrador extends javax.swing.JFrame {
   
         }
     }//GEN-LAST:event_btnguardarActionPerformed
+
+    private void btnguardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnguardarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnguardarMouseClicked
 
    
     public static void main(String args[]) {
