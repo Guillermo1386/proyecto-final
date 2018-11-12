@@ -126,7 +126,7 @@ public class Administrador extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(204, 204, 204));
         jLabel8.setText("ESTADO ");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(40, 320, 50, 14);
+        jLabel8.setBounds(30, 320, 50, 14);
 
         txtnomVideo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,6 +157,7 @@ public class Administrador extends javax.swing.JFrame {
         getContentPane().add(txtgeneroVideo);
         txtgeneroVideo.setBounds(150, 200, 60, 20);
 
+        btneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/delete.png"))); // NOI18N
         btneliminar.setText("Eliminar");
         btneliminar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -169,8 +170,9 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btneliminar);
-        btneliminar.setBounds(330, 160, 120, 23);
+        btneliminar.setBounds(330, 153, 120, 30);
 
+        btnbuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/maps-and-flags.png"))); // NOI18N
         btnbuscar.setText("Buscar");
         btnbuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,7 +180,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnbuscar);
-        btnbuscar.setBounds(330, 200, 120, 23);
+        btnbuscar.setBounds(330, 193, 120, 30);
 
         tbladministrador.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -202,6 +204,7 @@ public class Administrador extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(20, 360, 580, 100);
 
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cloud-reload-symbol.png"))); // NOI18N
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,9 +212,9 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnActualizar);
-        btnActualizar.setBounds(330, 240, 120, 23);
+        btnActualizar.setBounds(330, 233, 120, 30);
 
-        jButton1.setText("Regresar a menu");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -223,16 +226,16 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(30, 50, 120, 23);
+        jButton1.setBounds(30, 50, 90, 33);
 
-        btnsalir.setText("Salir");
+        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/exit.png"))); // NOI18N
         btnsalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsalirActionPerformed(evt);
             }
         });
         getContentPane().add(btnsalir);
-        btnsalir.setBounds(460, 60, 80, 23);
+        btnsalir.setBounds(460, 50, 80, 40);
 
         txtcanvideo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -250,6 +253,7 @@ public class Administrador extends javax.swing.JFrame {
         getContentPane().add(txtvalorVideo2);
         txtvalorVideo2.setBounds(150, 240, 60, 20);
 
+        btnlimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/archeology.png"))); // NOI18N
         btnlimpiar.setText("Limpliar");
         btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -257,8 +261,9 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnlimpiar);
-        btnlimpiar.setBounds(330, 120, 120, 23);
+        btnlimpiar.setBounds(330, 113, 120, 30);
 
+        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/save.png"))); // NOI18N
         btnguardar.setText("Guardar");
         btnguardar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -271,7 +276,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnguardar);
-        btnguardar.setBounds(330, 290, 120, 23);
+        btnguardar.setBounds(330, 283, 120, 30);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gru.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
