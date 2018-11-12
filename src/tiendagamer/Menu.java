@@ -8,7 +8,7 @@ public class Menu extends javax.swing.JFrame {
     public Menu() {
         initComponents();
          this.setLocationRelativeTo(null);
-         this.setSize(650, 550);
+         this.setSize(600, 450);
     }
 
    
@@ -20,21 +20,26 @@ public class Menu extends javax.swing.JFrame {
         btnbuscarjuego = new javax.swing.JButton();
         btningCliente = new javax.swing.JButton();
         btnventajuego = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menu-button-of-three-horizontal-lines.png"))); // NOI18N
         jLabel1.setText("MENU PRINCIPAL");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 150, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 180, 40));
 
+        btnbuscarjuego.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/clip.png"))); // NOI18N
         btnbuscarjuego.setText("INGRESO VIDEO JUEGO");
         btnbuscarjuego.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnbuscarjuegoMouseClicked(evt);
             }
         });
-        getContentPane().add(btnbuscarjuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 160, 20));
+        getContentPane().add(btnbuscarjuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 170, 20));
 
+        btningCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/clip.png"))); // NOI18N
         btningCliente.setText("INGRESAR CLIENTE");
         btningCliente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -46,15 +51,20 @@ public class Menu extends javax.swing.JFrame {
                 btningClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(btningCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 140, 20));
+        getContentPane().add(btningCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 170, 20));
 
+        btnventajuego.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/credit-card.png"))); // NOI18N
         btnventajuego.setText("VENTA DE JUEGOS");
         btnventajuego.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnventajuegoMouseClicked(evt);
             }
         });
-        getContentPane().add(btnventajuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 130, 20));
+        getContentPane().add(btnventajuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 170, 20));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gow.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-210, -20, 1200, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -121,5 +131,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btningCliente;
     private javax.swing.JButton btnventajuego;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

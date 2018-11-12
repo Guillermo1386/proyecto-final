@@ -75,17 +75,20 @@ public class Administrador extends javax.swing.JFrame {
         txtvalorVideo2 = new javax.swing.JTextField();
         btnlimpiar = new javax.swing.JButton();
         btnguardar = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("INGRESO VIDEO JUEGOS");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(143, 11, 210, 14);
 
-        jLabel2.setText("Nombre juego");
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setText("NOMBRE JUEGO");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(30, 100, 110, 14);
+        jLabel2.setBounds(30, 150, 110, 14);
 
         txtcodVideo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,27 +101,32 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtcodVideo);
-        txtcodVideo.setBounds(160, 60, 59, 20);
+        txtcodVideo.setBounds(150, 100, 59, 20);
 
-        jLabel3.setText("Codigo  juego");
+        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setText("CODIGO JUEGO");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 60, 110, 14);
+        jLabel3.setBounds(30, 100, 110, 14);
 
-        jLabel4.setText("Genero  juego");
+        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel4.setText("GENERO JUEGO");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 140, 100, 14);
+        jLabel4.setBounds(30, 200, 100, 14);
 
-        jLabel5.setText("Cantidad  juego");
+        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setText("CANTIDAD JUEGO");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 220, 110, 14);
+        jLabel5.setBounds(30, 280, 110, 14);
 
-        jLabel6.setText("Valor  juego");
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setText("VALOR JUEGO");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 190, 100, 14);
+        jLabel6.setBounds(30, 240, 100, 14);
 
-        jLabel8.setText("Estado");
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setText("ESTADO ");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(40, 250, 34, 14);
+        jLabel8.setBounds(40, 320, 50, 14);
 
         txtnomVideo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +139,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtnomVideo);
-        txtnomVideo.setBounds(160, 100, 60, 20);
+        txtnomVideo.setBounds(150, 150, 60, 20);
 
         txtestado.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -139,7 +147,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtestado);
-        txtestado.setBounds(160, 240, 60, 20);
+        txtestado.setBounds(150, 320, 60, 20);
 
         txtgeneroVideo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -147,7 +155,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtgeneroVideo);
-        txtgeneroVideo.setBounds(160, 140, 60, 20);
+        txtgeneroVideo.setBounds(150, 200, 60, 20);
 
         btneliminar.setText("Eliminar");
         btneliminar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -161,7 +169,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btneliminar);
-        btneliminar.setBounds(250, 100, 120, 23);
+        btneliminar.setBounds(330, 160, 120, 23);
 
         btnbuscar.setText("Buscar");
         btnbuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +178,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnbuscar);
-        btnbuscar.setBounds(250, 150, 120, 23);
+        btnbuscar.setBounds(330, 200, 120, 23);
 
         tbladministrador.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -192,7 +200,7 @@ public class Administrador extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tbladministrador);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 300, 580, 100);
+        jScrollPane1.setBounds(20, 360, 580, 100);
 
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +209,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnActualizar);
-        btnActualizar.setBounds(250, 200, 120, 23);
+        btnActualizar.setBounds(330, 240, 120, 23);
 
         jButton1.setText("Regresar a menu");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -209,8 +217,13 @@ public class Administrador extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(250, 240, 120, 23);
+        jButton1.setBounds(30, 50, 120, 23);
 
         btnsalir.setText("Salir");
         btnsalir.addActionListener(new java.awt.event.ActionListener() {
@@ -219,7 +232,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnsalir);
-        btnsalir.setBounds(400, 50, 80, 23);
+        btnsalir.setBounds(460, 60, 80, 23);
 
         txtcanvideo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -227,7 +240,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtcanvideo);
-        txtcanvideo.setBounds(160, 210, 60, 20);
+        txtcanvideo.setBounds(150, 280, 60, 20);
 
         txtvalorVideo2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -235,7 +248,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtvalorVideo2);
-        txtvalorVideo2.setBounds(160, 180, 60, 20);
+        txtvalorVideo2.setBounds(150, 240, 60, 20);
 
         btnlimpiar.setText("Limpliar");
         btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -244,7 +257,7 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnlimpiar);
-        btnlimpiar.setBounds(400, 100, 100, 23);
+        btnlimpiar.setBounds(330, 120, 120, 23);
 
         btnguardar.setText("Guardar");
         btnguardar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -258,7 +271,12 @@ public class Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnguardar);
-        btnguardar.setBounds(250, 50, 120, 23);
+        btnguardar.setBounds(330, 290, 120, 23);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gru.jpg"))); // NOI18N
+        jLabel7.setText("jLabel7");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(-16, 0, 650, 480);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -563,6 +581,10 @@ public class Administrador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnguardarMouseClicked
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
    
     public static void main(String args[]) {
         
@@ -587,6 +609,7 @@ public class Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tbladministrador;

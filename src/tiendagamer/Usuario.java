@@ -71,42 +71,50 @@ private DefaultTableModel modelo;
         btnlimpiar = new javax.swing.JButton();
         txtgenero = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        lblcedula.setText("Cedula");
+        lblcedula.setForeground(new java.awt.Color(204, 204, 204));
+        lblcedula.setText("CEDULA");
         getContentPane().add(lblcedula);
-        lblcedula.setBounds(37, 55, 33, 14);
+        lblcedula.setBounds(40, 120, 60, 14);
 
-        lblnombre.setText("Nombre");
+        lblnombre.setForeground(new java.awt.Color(204, 204, 204));
+        lblnombre.setText("NOMBRE");
         getContentPane().add(lblnombre);
-        lblnombre.setBounds(33, 96, 37, 14);
+        lblnombre.setBounds(40, 170, 60, 14);
 
-        lbltelefono.setText("Telefono");
+        lbltelefono.setForeground(new java.awt.Color(204, 204, 204));
+        lbltelefono.setText("TELEFONO");
         getContentPane().add(lbltelefono);
-        lbltelefono.setBounds(33, 182, 42, 14);
+        lbltelefono.setBounds(40, 250, 60, 14);
 
-        jLabel9.setText("Apellido");
+        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel9.setText("APELLIDO");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(33, 141, 37, 14);
+        jLabel9.setBounds(40, 210, 50, 14);
 
+        txtcedula.setBackground(new java.awt.Color(204, 204, 255));
         txtcedula.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtcedulaKeyTyped(evt);
             }
         });
         getContentPane().add(txtcedula);
-        txtcedula.setBounds(90, 60, 69, 20);
+        txtcedula.setBounds(140, 110, 100, 30);
 
+        txtnombre.setBackground(new java.awt.Color(204, 204, 255));
         txtnombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtnombreKeyTyped(evt);
             }
         });
         getContentPane().add(txtnombre);
-        txtnombre.setBounds(90, 100, 69, 20);
+        txtnombre.setBounds(140, 160, 100, 30);
 
+        txtapeliido.setBackground(new java.awt.Color(204, 204, 255));
         txtapeliido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtapeliidoActionPerformed(evt);
@@ -118,16 +126,19 @@ private DefaultTableModel modelo;
             }
         });
         getContentPane().add(txtapeliido);
-        txtapeliido.setBounds(90, 140, 69, 20);
+        txtapeliido.setBounds(139, 200, 100, 30);
 
+        txttelefono.setBackground(new java.awt.Color(204, 204, 255));
         txttelefono.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txttelefonoKeyTyped(evt);
             }
         });
         getContentPane().add(txttelefono);
-        txttelefono.setBounds(90, 170, 69, 20);
+        txttelefono.setBounds(140, 240, 100, 30);
 
+        btnguardar.setBackground(new java.awt.Color(204, 204, 255));
+        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/save.png"))); // NOI18N
         btnguardar.setText("Guardar");
         btnguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,8 +146,9 @@ private DefaultTableModel modelo;
             }
         });
         getContentPane().add(btnguardar);
-        btnguardar.setBounds(200, 50, 130, 23);
+        btnguardar.setBounds(250, 110, 140, 30);
 
+        btneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/delete.png"))); // NOI18N
         btneliminar.setText("Eliminar");
         btneliminar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -149,17 +161,19 @@ private DefaultTableModel modelo;
             }
         });
         getContentPane().add(btneliminar);
-        btneliminar.setBounds(200, 90, 130, 23);
+        btneliminar.setBounds(250, 160, 140, 30);
 
-        btnactualizar.setText("Actulizar");
+        btnactualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cloud-reload-symbol.png"))); // NOI18N
+        btnactualizar.setText("Actualizar");
         btnactualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnactualizarActionPerformed(evt);
             }
         });
         getContentPane().add(btnactualizar);
-        btnactualizar.setBounds(200, 130, 130, 23);
+        btnactualizar.setBounds(250, 200, 140, 30);
 
+        btnbuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/maps-and-flags.png"))); // NOI18N
         btnbuscar.setText("Buscar");
         btnbuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,15 +181,12 @@ private DefaultTableModel modelo;
             }
         });
         getContentPane().add(btnbuscar);
-        btnbuscar.setBounds(200, 170, 130, 23);
+        btnbuscar.setBounds(250, 240, 140, 30);
 
         tblusuario.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 255)));
         tblusuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {},
-                {},
-                {},
-                {}
+
             },
             new String [] {
 
@@ -189,30 +200,32 @@ private DefaultTableModel modelo;
         jScrollPane1.setViewportView(tblusuario);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(25, 268, 452, 84);
+        jScrollPane1.setBounds(30, 330, 660, 84);
 
+        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("INGRESE CLIENTE");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(130, 10, 190, 14);
+        jLabel1.setBounds(210, 44, 220, 40);
 
-        jButton1.setText("Regresar a menu");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(200, 220, 130, 23);
+        jButton1.setBounds(250, 280, 140, 30);
 
-        btnsalir.setText("Salir");
+        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/exit.png"))); // NOI18N
         btnsalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsalirActionPerformed(evt);
             }
         });
         getContentPane().add(btnsalir);
-        btnsalir.setBounds(370, 50, 53, 23);
+        btnsalir.setBounds(420, 230, 120, 40);
 
+        btnlimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/archeology.png"))); // NOI18N
         btnlimpiar.setText("Limpiar");
         btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,13 +233,21 @@ private DefaultTableModel modelo;
             }
         });
         getContentPane().add(btnlimpiar);
-        btnlimpiar.setBounds(380, 90, 65, 23);
-        getContentPane().add(txtgenero);
-        txtgenero.setBounds(90, 210, 70, 20);
+        btnlimpiar.setBounds(420, 160, 120, 40);
 
-        jLabel2.setText("Genero");
+        txtgenero.setBackground(new java.awt.Color(204, 204, 255));
+        getContentPane().add(txtgenero);
+        txtgenero.setBounds(140, 280, 100, 30);
+
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setText("GENERO");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 210, 35, 20);
+        jLabel2.setBounds(40, 280, 70, 30);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Diccionario-Gamer.jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 780, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -505,6 +526,7 @@ private DefaultTableModel modelo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblcedula;
